@@ -2,7 +2,7 @@
 
 class MobitransfertCommons
 {
- public $ServiceToken = "";//Obtain your own here https://mobitransfert.com/api/register	
+ public $ServiceToken = "";//Obtain your own here https://play.google.com/store/apps/details?id=com.mobitransfert.online	
  public $test = "OK";
  public function __construct($token)
     {
@@ -12,7 +12,7 @@ class MobitransfertCommons
 	
  private function send_request($Datas_) {
       $datas = (object) $Datas_;      
-      $dest =  "https://api.mobitransfert.com/?action=$datas->action";
+      $dest =  "https://api.mobitransfert.com/$datas->action";
       
       if(count($Datas_)){
             foreach ($Datas_ as $key => $val){ 

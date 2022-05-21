@@ -1,7 +1,7 @@
 <?php
 class MobitransfertAPI
 {
-    public $_vendeur;//Votre service token Mobitransfert vous l'obtenez en vous inscrivant ici https://mobitransfert.com/register
+    public $_vendeur;//Votre service token Mobitransfert vous l'obtenez en vous inscrivant via l'application mobile https://play.google.com/store/apps/details?id=com.mobitransfert.online
     public $_prix;//prix du produit
     public $_qte;//Quantité achetée
     public $_codeMobilePaye;//Numéro mobile du client
@@ -95,7 +95,7 @@ class MobitransfertAPI
                 "ErrorMessage" => $error,
                 "SuccessMessage" => "false"
             ));
-        $url    = 'https://api.mobitransfert.com/?action=makepayment';
+        $url    = 'https://api.mobitransfert.com/Pay';
         $fields = array(
             'ServiceToken' => urlencode($this->_vendeur),
             'number' => $this->_codeMobilePaye,

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {//appel en POST
 }
 extract($_POST,EXTR_OVERWRITE);
 $service_token = "";
-//Votre service token Mobitransfert vous l'obtenez en vous inscrivant ici https://mobitransfert.com/api/register , il n'est pas public et est obligatoire
+//Votre service token Mobitransfert vous l'obtenez en vous inscrivant ici https://play.google.com/store/apps/details?id=com.mobitransfert.online, il n'est pas public et est obligatoire
 //Votre requêtte doit contenir les champs prix,qte et phone
 $nouvelle_comm = new MobitransfertAPI($service_token, $prix,$qte,$phone);
 $command_checker = new MobitransfertCommons($service_token);
